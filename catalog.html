@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="only light">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Altyn - Каталог</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js"></script>
+<script defer="defer" src="./assets/scripts/main.js"></script><link href="./assets/styles/main..css" rel="stylesheet"></head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+                <div class="header__wrapper">
+                    <div class="header__wrap">
+                        <a href="" class="header__logo"><img src="assets/img/logo..png" alt=""></a>
+                        <nav class="header__nav" data-burger-list>
+                            <ul class="header__nav-list">
+                                <li class="header__nav-item _mob"><a href="">Войти в личный кабинет</a></li>
+                                <li class="header__nav-item"><a href="">О бренде</a></li>
+                                <li class="header__nav-item"><a href="">Каталог</a></li>
+                                <li class="header__nav-item"><a href="">Оплата/доставка </a></li>
+                            </ul>
+                            <form action="" class="header__search _mob">
+                                <input type="text" class="header__search-input">
+                                <button class="header__search-submit"><svg>
+                                        <use xlink:href="assets/img/sprite..svg#search"></use>
+                                    </svg></button>
+                            </form>
+                        </nav>
+                    </div>
+                    <div class="header__wrap">
+                        <a href="" class="header__link">8 900 000 00 00</a>
+                        <form action="" class="header__search">
+                            <input type="text" class="header__search-input">
+                            <button class="header__search-submit"><svg>
+                                    <use xlink:href="assets/img/sprite..svg#search"></use>
+                                </svg></button>
+                        </form>
+                        <div class="header__controlls">
+                            <a href="#" class="header__controll">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite..svg#cart"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="header__controll">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite..svg#favorite"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="header__controll">
+                                <svg>
+                                    <use xlink:href="assets/img/sprite..svg#user"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header__burger-wrap">
+                            <div class="header__burger" data-burger>
+                                <div class="header__burger-item"></div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main --catalog">
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__wrapper">
+                        <h1 class="catalog__header page-header">Каталог</h1>
+                        <div class="catalog__headline">
+                            <span class="catalog__subheader">Выберите категория товара</span>
+
+                            <div class="catalog__filters" data-acc-parent>
+                                <div class="catalog__filters-icon" data-acc-trigger>
+                                    <svg><use xlink:href="assets/img/sprite..svg#filter"></use></svg>
+                                </div>
+                                <ul class="catalog__filter-list" data-acc-list>
+                                    <li class="catalog__filters-item" data-acc-parent>
+                                        <span class="catalog__filter-header" data-acc-trigger>
+                                            <svg><use xlink:href="assets/img/sprite..svg#ac-arrow"></use></svg>
+                                            Цвет
+                                        </span>
+                                        <ul class="catalog__filter-sublist" data-acc-list>
+                                            <li class="catalog__filter-subitem"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="catalog__filters-item" data-acc-parent>
+                                        <span class="catalog__filter-header" data-acc-trigger>
+                                            <svg><use xlink:href="assets/img/sprite..svg#ac-arrow"></use></svg>
+                                            Наличие
+                                        </span>
+                                        <ul class="catalog__filter-sublist" data-acc-list>
+                                            <li class="catalog__filter-subitem">
+                                                <label>
+                                                    <input type="radio" name="avail">
+                                                    В наличии
+                                                </label>
+                                            </li>
+                                            <li class="catalog__filter-subitem">
+                                                <label>
+                                                    <input type="radio" name="avail">
+                                                    Под заказ
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="catalog__filters-item" data-acc-parent>
+                                        <span class="catalog__filter-header" data-acc-trigger>
+                                            <svg><use xlink:href="assets/img/sprite..svg#ac-arrow"></use></svg>
+                                            Размер
+                                        </span>
+                                        <ul class="catalog__filter-sublist" data-acc-list>
+                                            <li class="catalog__filter-subitem">
+                                                <label>
+                                                    <input type="radio" name="avail">
+                                                    XS
+                                                </label>
+                                            </li>
+                                            <li class="catalog__filter-subitem">
+                                                <label>
+                                                    <input type="radio" name="avail">
+                                                    S
+                                                </label>
+                                            </li>
+                                            <li class="catalog__filter-subitem">
+                                                <label>
+                                                    <input type="radio" name="avail">
+                                                    M
+                                                </label>
+                                            </li>
+                                            <li class="catalog__filter-subitem">
+                                                <label>
+                                                    <input type="radio" name="avail">
+                                                    L
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="catalog__filters-item" data-acc-parent>
+                                        <span class="catalog__filter-header" data-acc-trigger>
+                                            <svg><use xlink:href="assets/img/sprite..svg#ac-arrow"></use></svg>
+                                            Товары с скидкой
+                                        </span>
+                                        <ul class="catalog__filter-sublist" data-acc-list>
+                                            <li class="catalog__filter-subitem"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="catalog__filters-item sd" data-acc-parent>
+                                        <span class="catalog__filter-header" data-acc-trigger>
+                                            <svg><use xlink:href="assets/img/sprite..svg#ac-arrow"></use></svg>
+                                            Цена
+                                        </span>
+                                        <ul class="catalog__filter-sublist" data-acc-list>
+                                            <li class="catalog__filter-subitem"></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="catalog__wrap">
+                            
+                            <div class="catalog__left">
+                                <div class="catalog__categories">
+                                    <ul class="catalog__categories-list">
+                                        <li class="catalog__categories-item" data-acc-parent>
+                                            <span data-acc-trigger>Категория 1</span>
+                                            <ul class="catalog__categories-sublist" data-acc-list>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="catalog__categories-item" data-acc-parent>
+                                            <span data-acc-trigger>Категория 2</span>
+                                            <ul class="catalog__categories-sublist" data-acc-list>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="catalog__categories-item" data-acc-parent>
+                                            <span data-acc-trigger>Категория 3</span>
+                                            <ul class="catalog__categories-sublist" data-acc-list>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="catalog__categories-item" data-acc-parent>
+                                            <span data-acc-trigger>Категория 4</span>
+                                            <ul class="catalog__categories-sublist" data-acc-list>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="catalog__categories-item" data-acc-parent>
+                                            <span data-acc-trigger>Категория 5</span>
+                                            <ul class="catalog__categories-sublist" data-acc-list>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="catalog__categories-item" data-acc-parent>
+                                            <span data-acc-trigger>Категория 6</span>
+                                            <ul class="catalog__categories-sublist" data-acc-list>
+                                                <li class="catalog__categories-subitem"><a href="#">Купальные костюмы</a></li>
+                                            </ul>
+                                        </li>                                                                                                                                                                                                     
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="catalog__right">
+                                
+
+                                <div class="catalog__list-wrap">
+                                    <ul class="catalog__list">
+                                        <li class="catalog__item">
+                                            <div class="catalog__item__img-box"><img src="assets/img/catalog-1..jpg" alt=""></div>
+                                            <div class="catalog__item__desc">
+                                                <div class="catalog__item-wrap">
+                                                    <span class="catalog__item-name">Раздельный купальник топ, высокие плавки</span>
+                                                    <span class="catalog__item-collection">ALTIN swimwear</span>
+                                                </div>
+                                                <span class="catalog__item-price">₽ 2900</span>
+                                            </div>
+                                        </li>
+                                        <li class="catalog__item">
+                                            <div class="catalog__item__img-box"><img src="assets/img/catalog-2..jpg" alt=""></div>
+                                            <div class="catalog__item__desc">
+                                                <div class="catalog__item-wrap">
+                                                    <span class="catalog__item-name">Женский слитный купальник утягивающий</span>
+                                                    <span class="catalog__item-collection">ALTIN swimwear</span>
+                                                </div>
+                                                <span class="catalog__item-price">₽ 3800</span>
+                                            </div>
+                                        </li>
+                                        <li class="catalog__item">
+                                            <div class="catalog__item__img-box"><img src="assets/img/catalog-3..jpg" alt=""></div>
+                                            <div class="catalog__item__desc">
+                                                <div class="catalog__item-wrap">
+                                                    <span class="catalog__item-name">Раздельный купальник топ, высокие плавки</span>
+                                                    <span class="catalog__item-collection">ALTIN swimwear</span>
+                                                </div>
+                                                <span class="catalog__item-price">₽ 2900</span>
+                                            </div>
+                                        </li>    
+                                        <li class="catalog__item">
+                                            <div class="catalog__item__img-box"><img src="assets/img/catalog-1..jpg" alt=""></div>
+                                            <div class="catalog__item__desc">
+                                                <div class="catalog__item-wrap">
+                                                    <span class="catalog__item-name">Раздельный купальник топ, высокие плавки</span>
+                                                    <span class="catalog__item-collection">ALTIN swimwear</span>
+                                                </div>
+                                                <span class="catalog__item-price">₽ 2900</span>
+                                            </div>
+                                        </li>
+                                        <li class="catalog__item">
+                                            <div class="catalog__item__img-box"><img src="assets/img/catalog-2..jpg" alt=""></div>
+                                            <div class="catalog__item__desc">
+                                                <div class="catalog__item-wrap">
+                                                    <span class="catalog__item-name">Женский слитный купальник утягивающий</span>
+                                                    <span class="catalog__item-collection">ALTIN swimwear</span>
+                                                </div>
+                                                <span class="catalog__item-price">₽ 3800</span>
+                                            </div>
+                                        </li>
+                                        <li class="catalog__item">
+                                            <div class="catalog__item__img-box"><img src="assets/img/catalog-3..jpg" alt=""></div>
+                                            <div class="catalog__item__desc">
+                                                <div class="catalog__item-wrap">
+                                                    <span class="catalog__item-name">Раздельный купальник топ, высокие плавки</span>
+                                                    <span class="catalog__item-collection">ALTIN swimwear</span>
+                                                </div>
+                                                <span class="catalog__item-price">₽ 2900</span>
+                                            </div>
+                                        </li>                                                                                                                        
+                                    </ul>
+                                    <div class="catalog__paginator">
+                                        <ul class="catalog__paginator-list">
+                                            <li class="catalog__paginator-item _active"><a href="">1</a></li>
+                                            <li class="catalog__paginator-item"><a href="">2</a></li>
+                                            <li class="catalog__paginator-item"><a href="">3</a></li>
+                                            <li class="catalog__paginator-item"><a href="">4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="container">
+                    <div class="footer__wrapper">
+                        <a href="" class="logo"><img src="assets/img/logo..png" alt=""></a>
+                        <nav class="footer__nav">
+                            <ul class="footer__nav__list">
+                                <li class="footer__nav__item"><a href="">Оплата и доставка</a></li>
+                                <li class="footer__nav__item"><a href="">Политика конфиденциальности</a></li>
+                                <li class="footer__nav__item"><a href="">Оферта</a></li>
+                                <li class="footer__nav__item"><a href="">Возврат товара</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bot">
+                <div class="container">
+                    <div class="footer__wrapper">
+                        <span class="copy">©2022. Все права защищены</span>
+                        <ul class="footer__nav__list">
+                            <li class="footer__nav__item"><a href="">Whatsapp</a></li>
+                            <li class="footer__nav__item"><a href="">Telegram</a></li>
+                            <li class="footer__nav__item"><a href="">Vkontakte</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="footer__epilog">Разработано в <a href="#">КЕДР</a></span>
+        </footer>
+
+    </div>
+</body>
+
+</html>
