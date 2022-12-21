@@ -11335,6 +11335,9 @@ $(document).ready(function () {
         slidesToScroll: 1,
         prevArrow: $('.about-prev'),
         nextArrow: $('.about-next'),
+        speed: 500,
+        fade: true,
+        cssEase: 'linear'
     });
 
     $('.card__left__vertical').slick({
@@ -11356,28 +11359,28 @@ $(document).ready(function () {
         swipe: false,
         // focusOnSelect: true,
         asNavFor: $('.card__left__vertical'),
-        arrows: false,   
+        arrows: false,
     });
 
-    $('.card__right__slider').each(function(){
+    $('.card__right__slider').each(function () {
         $(this).slick({
             slidesToShow: 3,
             slidesToScroll: 1,
             infinite: false,
-    
+
             appendArrows: $(this).parent('.card__right__slider-wrapper').find('.card__right__slider-controlls'),
             prevArrow: '<button class="card__right__slider-controll card-prev"><svg><use xlink:href="./assets/img/sprite..svg#slider-arrow-right"></use></svg></button>',
             nextArrow: '<button class="card__right__slider-controll card-next"><svg><use xlink:href="./assets/img/sprite..svg#slider-arrow-right"></use></svg></button>',
         });
     });
-    
 
-    $('[data-acc-trigger]').on('click', function(){
+
+    $('[data-acc-trigger]').on('click', function () {
         let $this = $(this),
-        $parent = $this.parent('[data-acc-parent]'),
-        $list = $parent.children('[data-acc-list]');
+            $parent = $this.parent('[data-acc-parent]'),
+            $list = $parent.children('[data-acc-list]');
 
-        if($this.hasClass('_active')) {
+        if ($this.hasClass('_active')) {
             $this.removeClass('_active');
             $parent.removeClass('_active');
             $list.removeClass('_active').slideUp(300);
@@ -11388,11 +11391,11 @@ $(document).ready(function () {
         }
     });
 
-    $('[data-burger]').on('click', function(){
+    $('[data-burger]').on('click', function () {
         let $this = $(this),
-        $list = $('[data-burger-list]');
+            $list = $('[data-burger-list]');
 
-        if($this.hasClass('_active')) {
+        if ($this.hasClass('_active')) {
             $this.removeClass('_active');
             $list.removeClass('_active').slideUp(300);
         } else {
@@ -11401,37 +11404,53 @@ $(document).ready(function () {
         }
     });
 
-    $('[data-tab]').on('click', function(){
+    $('[data-tab]').on('click', function () {
         let $this = $(this),
-        $parent = $this.parents('[data-tab-wrapper]'),
-        data = $this.attr('data-tab'),
-        $content = $parent.find('[data-content="' + data + '"]');
+            $parent = $this.parents('[data-tab-wrapper]'),
+            data = $this.attr('data-tab'),
+            $content = $parent.find('[data-content="' + data + '"]');
 
-        let $sublist = $this.children('.main-services__item__sublist'),
-        html = $content.html();
+        $('[data-tab]').removeClass('_active');
 
-        if($(window).innerWidth() <= 820) {
-            if($this.hasClass('_active')) {
-                $this.removeClass('_active');
-                $sublist.html(html).slideUp(300).removeClass('_active');
-            } else {
-                $sublist.html(html).slideDown(300).addClass('_active');
-                $this.addClass('_active');
-            }
-
-        } else {
-            $('[data-tab]').removeClass('_active');
-            $.when(
-                $('[data-content]').removeClass('_active').fadeOut(300)
-            ).done(function() {
-                $content.addClass('_active').fadeIn(300);
-            });
-            $this.addClass('_active');
-        }
+        $.when(
+            $('[data-content]').removeClass('_active').fadeOut(300)
+        ).done(function () {
+            $content.addClass('_active').fadeIn(300);
+        });
         
-
+        $this.addClass('_active');
     });
 
+    $('[data-favorite-item]').on('click', function () {
+        let $this = $(this),
+            $addBtn = $('[data-favorite-add]'),
+            $allBtn = $('[data-favorite-all]'),
+            $counter = $('[data-counter]'),
+            $average = $('[data-average]');
+
+        if (!$this.hasClass('_active')) {
+            $this.addClass('_active');
+            $average.text(parseInt($average.attr('data-average')) + 1);
+            $average.attr('data-average', $average.text());
+        } else {
+            $this.removeClass('_active');
+            $average.text(parseInt($average.attr('data-average')) - 1);
+            $average.attr('data-average', $average.text());
+        }
+    });
+
+    $('[data-math]').on('click', function () {
+        let $this = $(this),
+            $counter = $this.parent().find('[data-counter]'),
+            val = parseInt($counter.val());
+        // alert(val);
+
+        if ($this.attr('data-math') == 'p') {
+            $counter.val(val + 1);
+        } else {
+            $counter.val(val - 1);
+        }
+    });
 });
 })();
 

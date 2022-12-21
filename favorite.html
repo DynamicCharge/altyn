@@ -71,7 +71,73 @@
     </header>
 
     <main class="main --favorite">
-
+        <section class="favorite">
+            <div class="container">
+                <div class="favorite__wrapper">
+                    <div class="favorite__headline">
+                        <a href="#" class="favorite__link">
+                            <svg>
+                                <use xlink:href="assets/img/sprite..svg#nav-arrow-left"></use>
+                            </svg>
+                            <span>Вернуться к каталогу</span>                            
+                        </a>
+                    </div>
+                    <h1 class="favorite__header page-header">Избранное</h1>
+                    <ul class="favorite__list">
+                        <li class="favorite__item" data-favorite-item>
+                            <div class="favorite__item-wrapper">
+                                <img src="assets/img/search1..jpg" alt="" class="favorite__item-img">
+                                <span class="favorite__item-name">
+                                    <span class="sale">-11%</span>
+                                    Раздельный купальник топ, высокие плавки
+                                </span>
+                            </div>
+                            <div class="favorite__item-wrapper">
+                                <div class="favorite__item-box">
+                                    <span class="favorite__item-price">₽ 2900</span>
+                                    <a href="#" class="favorite__item-close"><img src="assets/img/close..svg" alt=""></a>
+                                </div>
+                                <div class="favorite__item-count">
+                                    <button class="favorite__item-btn" data-math>-</button>
+                                    <input type="text" class="favorite__item-input" data-counter value="0">
+                                    <button class="favorite__item-btn" data-math="p">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="favorite__item" data-favorite-item>
+                            <div class="favorite__item-wrapper">
+                                <img src="assets/img/search1..jpg" alt="" class="favorite__item-img">
+                                <span class="favorite__item-name">
+                                    <span class="sale">-11%</span>
+                                    Раздельный купальник топ, высокие плавки
+                                </span>
+                            </div>
+                            <div class="favorite__item-wrapper">
+                                <div class="favorite__item-box">
+                                    <span class="favorite__item-price">₽ 2900</span>
+                                    <a href="#" class="favorite__item-close"><img src="assets/img/close..svg" alt=""></a>
+                                </div>
+                                <div class="favorite__item-count">
+                                    <button class="favorite__item-btn" data-math="-">-</button>
+                                    <input type="text" class="favorite__item-input" data-counter value="0">
+                                    <button class="favorite__item-btn" data-math="p">+</button>
+                                </div>
+                            </div>
+                        </li>                        
+                    </ul>
+                    <div class="favorite__footer">
+                        <span class="favorite__choosen page-text">
+                            Выбрано товаров:
+                            <span class="num" data-average="0">0</span>                            
+                        </span>
+                        <div class="favorite__controlls">
+                            <button class="favorite-all" data-favorite-all>Выбрать все товары</button>
+                            <button class="favorite-add page-btn" data-favorite-add>Добавить в корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
